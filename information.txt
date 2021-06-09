@@ -1,0 +1,25 @@
+Reference links:
+=> https://www.freecodecamp.org/news/how-to-create-a-rails-project-with-a-react-and-redux-front-end-8b01e17a1db/
+=> https://www.geeksforgeeks.org/reactjs-router/#:~:text=React%20Router%20is%20a%20standard,in%20sync%20with%20the%20URL.
+=> https://github.com/reactjs/react-rails#use-with-asset-pipeline
+
+rvm use 2.6.3
+gem install rails -v 6.0.3
+rvm list
+rails new router_basic_rails --webpack=react
+cd router_basic_rails/
+rvm gemset create router_basic_rails
+rvm gemset use create router_basic_rails
+rvm gemset use router_basic_rails
+rvm gemset list
+bundle install
+rails g controller api/home
+rails g controller home
+rails generate react:component HelloWorld greeting:string
+rails webpacker:install:react
+yarn install
+rails g react:install
+rails s
+
+To start webpacker
+./bin/webpack-dev-s
