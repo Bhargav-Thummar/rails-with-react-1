@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   end
 
   resources :home, only: [:index]
+
+  get '*page', to: 'home#index', constraints: ->(req) do
+    !req.xhr? && req.format.html?
+  end
 end
